@@ -1,0 +1,14 @@
+import pylab
+def f(x):
+    return (39*x*x/40+0.8*12*x-3.2*12*12)**0.5
+
+pylab.title('Figure 1.')
+pylab.plot(range(18,80),[f(i) for i in range(18,80)])
+pylab.plot(range(18,80),range(18,80),'.')
+pylab.plot(range(18,80),[0]*len(range(18,80)))
+pylab.plot([18]*80,[i for i in range(0,80)],'r')
+pylab.xlabel('Number of Hydralisk')
+pylab.ylabel('Remaining Hydralisk')
+pylab.legend(('y = x(t_f)','y = x', 'x = 18'),'lower right')
+pylab.show()
+
